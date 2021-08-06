@@ -31,6 +31,7 @@ h4{
 --openS:'Open Sans', sans-serif;
 --verde-claro: #07AD76;
 --negro-claro: #2A2C31;
+--gris: #5F5F5F;
 
 }
 
@@ -310,8 +311,8 @@ display: none;
   width: 80px;
 }
 
-.setion2{
-  height: 1270px;
+.section2{
+  height: 1170px;
   padding-top: 400px;
 }
 
@@ -373,6 +374,194 @@ display: none;
   -o-transform: translateX(8px);
 }
 
+/* SECTION 3 */
+.section3{
+  height: 650px;
+  position: relative;
+  margin-bottom: 88px;
+  
+}
+
+.img-grid{
+  display: grid;
+  justify-content: center;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 303px);
+}
+
+.b-green{
+  background: var(--verde-claro);
+  position: absolute;
+  width: 100%;
+  height: 380px;
+  top: calc(100% - 511px);
+}
+
+.section3::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 380px;
+  opacity: 30%;
+  z-index: 1;
+  top: calc(100% - 511px);
+  background: url(/img/topBg.png) center / contain;
+}
+
+.img-grid div {
+  z-index: 1;
+}
+.img-grid .img1{
+  background: url(/img/replicas.jpg) center / cover;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+.img-grid .img2{
+  background: url(/img/specna-arms-BHtfQxJJBbE-unsplash.jpg) center / cover;
+  grid-column: 2 / 4 ;
+}
+
+.img-grid .img3{
+  background: url(/img/upgrades.jpg) center / cover;
+  grid-column: 2 / 3 ;
+  grid-row: 2;
+}
+.img-grid .img4{
+  background: url(/img/accesorios.jpg) center / cover;
+  grid-column: 3 / 4 ;
+  grid-row: 2;
+}
+.img-grid div img{
+  width: 100%;
+  height: 100%;
+}
+
+/* PRODUCTOS */
+
+.section4{
+  height: 1400px;
+  background: red;
+  color:var(--verde-claro);
+  font-size: 30px;
+}
+
+.product-title span{
+  height: 1px;
+  background: var(--verde-claro);
+  width: 70%;
+}
+
+.products{
+  background: wheat;
+  min-height: 820px;  
+  height: auto;
+  margin-top: 41px;
+
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.products .product-card{
+  height: 390px;
+  z-index: 10000000000;
+  /*height: 400px;
+  */position: relative;
+  background: yellow;
+  transition: all .4s ease  ;
+  -webkit-transition: all .4s ease  ;
+  -moz-transition: all .4s ease  ;
+  -ms-transition: all .4s ease  ;
+  -o-transition: all .4s ease  ;
+}
+  .products .product-card:hover{
+    box-shadow: 0 4px 20px #00000006;
+    box-shadow: 0 4px 20px red;
+  }
+
+.product-img{
+  width: 270px;
+  height: 270px;
+  background: wheat;
+  margin: auto;
+}
+.product-img img{
+  width: 100%;
+  height: 100%;
+}
+
+.product-info {
+  width: 270px;
+  margin: auto;
+}
+.product-info h1{
+  font-size: 12px;
+  color: var(--gris);
+  margin: 10px 0 3px 0; 
+}
+.product-info p{
+  font-size: 16px;
+  color: #2A2C31;
+  margin: 0; 
+  font-weight: 600;
+}
+
+.product-info span{
+  margin-top: 10px;
+  font-size: 16px;
+  color: var(--verde-claro);
+  font-weight: 700;
+}
+.buy-c{
+  opacity: 0;
+  width: 110px;
+  height: 30px;
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  transition: all .4s ease;
+  -webkit-transition: all .4s ease;
+  -moz-transition: all .4s ease;
+  -ms-transition: all .4s ease;
+  -o-transition: all .4s ease;
+}
+
+.buy-c .buy{
+  width: 70px;
+  height: 30px;
+  background: white;
+  border: 1px solid #EFEFEF;
+  color: var(--verde-claro);
+  font-size: 9px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+.car-btn{
+  width: 30px;
+  height: 30px;
+  background-color: var(--verde-claro);
+  color: white;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+.car-btn i{
+  font-size: 18px;
+}
+
+.product-card:hover   .buy-c{
+  opacity: 1;
+}
 
 @media (max-width: 600px) {
   /* NABVAR  */
@@ -464,4 +653,33 @@ display: none;
   .car{
     color: white;
   }
+  .section2{
+    height: auto;
+  }
+
+
+  /* grid  */
+  .img-grid{
+    /* margin-top: 200px; */
+    /* display: flex;    */
+    /* flex-wrap: wrap; */
+    /* height: auto; */
+  }
+  .img4{
+    grid-column: 1 / -1;
+    /* grid-row: unset; */
+  }
+
+  /* grid-products  */
+  .products{
+    grid-template-columns: repeat(auto-fill, 46%);
+    justify-content: space-between;
+  }
+  .products div{
+    max-height: 100%;
+    height: 300px;
+  }
+
+
+
 }
