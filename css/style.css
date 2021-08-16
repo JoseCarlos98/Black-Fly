@@ -56,7 +56,7 @@ h4{
 .c-navbar{
   width: 100%;
   background: black;
-  height: 110px;
+  height: 100px;
   display: flex;
   align-items: center;
 }
@@ -138,7 +138,8 @@ h4{
   margin-left: 5px;
   color: white;
 }
-.menu div a {
+
+.menu div a, .submenu li a {
   display: block;
   font-size: 10px;
   /* line-height: 65px; */
@@ -148,7 +149,7 @@ h4{
   font-weight: 700;
   font-family: var(--openS);
   text-decoration: none;
-  color: white;
+  color: white!important;
   transition: all .4s ease;
   -webkit-transition: all .4s ease;
   -moz-transition: all .4s ease;
@@ -213,6 +214,11 @@ h4{
 }
 .redes .icons i{
   font-size: 16px;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
 }
 /* SHOP CAR  */
 .car{
@@ -228,6 +234,7 @@ h4{
 
 .car i{
   border-right: 1px solid white;
+  cursor: pointer;
 }
 
 .car i, .car p{
@@ -318,7 +325,8 @@ h4{
   margin-right: 10px;
   width: 100px;
   height: 30px;
-  background: var(--verde-claro);
+  /* background: var(--verde-claro); */
+  background: #07AD76;
   text-decoration: none;
   color: inherit;
   font-size: 12px;
@@ -359,6 +367,7 @@ h4{
 
 .carrucel-config{
   height: 100%;
+  overflow: hidden;
   z-index: 1;
   background: var(--negro-claro);
   border: 35px solid var(--negro-claro);
@@ -405,7 +414,8 @@ h4{
   width: 400px;
 }
 .info-us h2{
-  margin-bottom: 10px;
+  margin: auto;
+  width: 90%;
   font-size: 30px;
   margin-bottom: 21px;
   color: var(--verde-claro);
@@ -1116,6 +1126,11 @@ footer{
 .color3{
   background: #354755;
 }
+.color1:hover,
+.color2:hover,
+.color3:hover{
+  opacity: 90%;
+}
 
 .add-car{
   width: 310px;
@@ -1124,7 +1139,7 @@ footer{
   display: flex;
   margin-bottom: 25px;
 }
-.add-car .add{
+.add{
   width: 100px;
   height: 100%;
   display: flex;
@@ -1137,11 +1152,11 @@ footer{
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
 }
-.add-car .add span{
+.add span{
   font-size: 16px;
   color: #262626;
 }
-.add-car .add i{
+.add i{
   color:var(--verde-claro);
   font-size: 8px;
   height: 100%;
@@ -1163,6 +1178,14 @@ footer{
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
+  transition: all .3s ease;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+}
+.btnAdd-car:hover{
+  background: #0cc184;
 }
 
 .product-description{
@@ -1254,7 +1277,9 @@ footer{
 .topPadding{
   padding-top: 700px;
 }
-
+.product-information{
+  display: flex;
+}
 
 .us-info h1{
   font-size: 18px;
@@ -1276,29 +1301,189 @@ footer{
   margin: auto;
   background: url(/img/qsBF.png) no-repeat center / contain;
 }
+.car-titles > div{
+  text-align: center;
+}
+.car-info{
+  padding: 10px;
+}
 
+.car-info .c-erased{
+  border-radius: 100%;
+  width: 22px;
+  height: 22px;
+  margin-right: 25px;
+  background:#EFEFEF;
+  cursor: pointer;
+}
+.car-info img{
+  width: 130px;
+  height: 130px;
+}
+.car-info i{
+  color: var(--verde-claro);
+  font-size: 9PX;
+}
+.car-info div{
+  color: var(--verde-claro);
+  font-size: 9PX;
+  display: flex;
+  align-items: center;
+}
+
+.car-info{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+.car-info p, .car-info h1, .car-info h2, .car-info h3{
+  font-size: 16px;
+  color: #3C3C3C;
+  margin: 0;
+}
+.car-info h1{
+  color: #262626;
+  font-weight: 700;
+  margin: 0;
+}
+.car-info h3{
+  color: red;
+  font-weight: 600;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.car-info .add{
+  height: 50px;
+  background: #F0F0F0;
+  border: unset;
+}
+
+.d-pay{
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.coupon{
+  height: 60px;
+  display: flex;
+}
+.coupon input{
+  border: 2px solid var(--verde-claro);
+  height: 60px;
+  width: 250px;
+  text-indent: 15px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  outline: none;
+}
+.coupon button{
+  height: 60px;
+  width: 120px;
+  background: var(--verde-claro);
+  border: none;
+  color: white;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.subtotal{
+  height: auto;
+}
+.subtotal > div{
+  margin-bottom: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+.subtotal > div p{
+  font-size: 16px;
+}
+.subtotal div:nth-child(2) {
+  color: #6D6E70;
+}
+
+.subtotal div:nth-child(3) {
+  color: var(--verde-claro);
+}
+.subtotal div:nth-child(5) {
+  color: #3C3C3C;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 37px 0 33px 0;
+}
+
+.to-pay{
+  background: #2A2C31;
+  height: 60px;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 3px;
+  justify-content: center!important;
+  transition: all .3s ease;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+}
+
+.to-pay:hover{
+  opacity: 90%;
+}
+.sale-off {
+  width: 90%;
+  margin: auto;
+  font-size: 10px;
+  line-height: 10px;
+}
+.submenu i{
+  position: absolute;
+  top: 70px;
+  display: unset;
+  right: 35px;
+  color: white;
+  font-size: 16px;
+  color: #00BA7D;
+}
+.sale-off p{
+  color: white;
+}
+.sale-off span{
+  color: #07AD76;
+  font-weight: 700;
+}
+.submenu i, .logo2, .movil-cart, .sale-off, .submenu img{
+  display: none;
+}
 
 @media (max-width: 600px) {
   /* NABVAR  */
   .menu {
+    z-index: 0;
     display: block;
     position: absolute;
     width: 100%;
     /* top: 100px; */
     top: 93px;
     right: 0px;
-    background: #e7e7e7;
+    background: #010001;
     transition: 0.6s;
-    z-index: 1000;
     height: 0px;
+    top: 0;
     visibility: hidden;
     overflow-y: hidden;
     text-align: center;
+    padding-top: 50px;
   }
   .nav.active .menu {
     visibility: visible;
     overflow-y: auto;
-    height: 275px;
+    /* height: 600px; */
+    /* height: 275px; */
+    height: calc(100vh - 0%);
   }
   .menu div a {
     padding: 0;
@@ -1307,8 +1492,61 @@ footer{
     margin-right: 0;
     border-bottom: 2px solid rgba(0, 0, 0, 0.05);
     text-align: center;
-
   }
+  .redes .icons{
+    margin-right: 0;
+  }
+  .car{
+    display: none;
+  }
+
+  .movil-cart{
+    display: flex;
+  }
+
+  .logo2,  .sale-off, .submenu img, .submenu i{
+    display: unset;
+  }
+
+  .dropdown-menu-dark .dropdown-item{
+    color: var(--verde-claro)!important;
+  }
+  .dropdown-menu{
+    transition: all .4s ease;
+    position: unset!important;
+    transform: unset!important;
+    background: none!important;
+    -webkit-transform: unset!important;
+    -moz-transform: unset!important;
+    -ms-transform: unset!important;
+    -o-transform: unset!important;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+}
+
+  .movil-cart{
+    width: 160px;
+    height: 36px;
+    border-radius: 6px;
+    background: #00BA7D;
+    color: white;
+    margin: auto;
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 60px!important;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    justify-content: space-evenly;
+}
+
+  .submenu img{
+    width: 175px;
+  }
+
   .btn-mobile {
     display: flex;
     padding: 10px;
@@ -1360,9 +1598,10 @@ footer{
   .logoTop1{
     display: unset;
     margin: auto;
+    margin-top: 10px;
   }
   .info-us h2{
-    font-size: 27px;
+    font-size: 24px;
   }
 
   .submenu{
@@ -1373,6 +1612,7 @@ footer{
     color: var(--verde-claro);
     margin: auto;
     margin-top: 10px;
+    justify-content: center;
   }
   .car{
     color: white;
@@ -1418,30 +1658,36 @@ footer{
     width: 90%;
     height: 50%;
   }
-  .f-sb{
-    flex-direction: column;
-    justify-content: center;
+  
+  .product-title{
+    font-size: 24px;
+    width: 90%;
+    margin: auto;
   }
-  .c-carrucel{
-    height: auto;
+  .product-title span{
+    width: 25%;
   }
+  
+
 
   .section2{
-    padding-top: 140px;
-    text-align: center;
+    padding-top: 1150px;
+    /* text-align: center; */
   }
   .OpenS14{
-    text-align: center;
+    /* text-align: center; */
     width: 90%;
     margin: auto;
   }
   .carrucel-config{
-    border: 15px solid var(--negro-claro)
+    border: unset
   }
   .info-card{
-    width: 80%;
-    height: auto;
-    top:  calc(50% - 70px)!important;
+    width: 90%;
+    left: 5%;
+    right: 5%;
+    bottom: 0;
+    top: unset!important;
   }
   .info-card h2{
     font-size: 18px;
@@ -1452,42 +1698,33 @@ footer{
   }
 
   .info-card .see{
-    width: 100px;
+    width: 100%;
     height: 30px;
   }
   .info-card a{
     width: 85px;
-    /* width: 60%; */
     height: 25px;
     padding: 5px;
     font-size: 9px;
   }
   .carrucel-fotter {
-    position: absolute;
     right: 12px;
     left: 12px;
+    flex-direction: column;
+    height: 500px;
+    justify-content: space-evenly;
   }
   .carrucel-fotter div img{
-    width: 35%;
-
+    width: 80px;
   }
   .carrucel-fotter div {
     font-size: 10px;
+    border: unset;
+    width: 250px;
     text-align: center;
     padding: 5px;
   }
-  .section1{
-    height: 220px;
-    padding: 0;
-  }
-  .section1::before{
-    background-position: bottom;
-    z-index: 0;
-  }
-  .carrucel-fotter{
-    height: 100px;
-  }
-
+ 
   /* SECTION */
 
   .info-us{
@@ -1496,6 +1733,7 @@ footer{
   .conocemas{
     margin: auto;
     margin-top: 20px;
+    margin-left: 20px;
   }
 
   .img-logo{
@@ -1504,8 +1742,9 @@ footer{
     margin-bottom: 50px;
   }
   .b-green{
-    top: calc(100% - 800px);
-    top: calc(100% - 60%);
+    height: 90%;
+    /* top: calc(100% - 800px); */
+    top: calc(100% - 95%);
   }
 
   /* PRODUCTS  */
@@ -1531,7 +1770,7 @@ footer{
   }
 
   .copyright p{
-    font-size: 13px;
+    font-size: 10px;
     text-align: center;
   }
   .copy-config{
@@ -1628,5 +1867,131 @@ footer{
     height: 60px;
   }
 
+  /* CAR  */
+  .d-pay{
+    display: unset;
+  }
+  .subtotal{
+    padding: 15px;
+  }
+
+  .coupon{
+    margin-bottom: 50px;
+    justify-content: center;
+  }
+
+  .car-titles > div{
+    font-size: 10px;
+  }
+  .car-info p{
+    font-size: 9px;
+    text-align: center;
+    
+  }
+   .car-info h1, .car-info h2, .car-info h3{
+    font-size: 11px;
+    text-align: center;
+    margin: 5px;
+  }
+
+  .car-info .add{
+    width: 70px;
+    margin: 15px;
+    height: 30px;
+  }
+
+  .car-info .c-erased{
+    margin: 0;
+  }
+  .car-info img{
+    width: 60px;
+    height: 60px;
+  }
+  .btn-mobile img{
+    width: 150px;
+  }
+
+  /* RESPONSIVE  */
+  .section1::before{
+    display: none;
+
+  }
+  .cel-info{
+    display: none;
+  }
+  /* .header{
+    margin-top: 10px;
+  } */
+  .c-navbar .container{
+    padding: 0;
+  }
+
+  .section1{
+    height: auto;
+    /* height: 100vh; */
+    padding: 0;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+  }
+  .c-carrucel{
+    height: calc(100vh - 0%)!important;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 0!important;
+  }
+  .carousel-item{    
+    height: 680px;
+    height: 100%;
+  }
+  .img1Slider3{
+    background: url(/img/slide3.jpg) no-repeat center / cover;
+  }
+  .img1Slider2{
+    background: url(/img/slide2.jpg) no-repeat left / cover;
+  }
+  .img1Slider1{
+    background: url(/img/slide1.jpg) no-repeat center / cover;
+  }
+  .carousel-item img{
+    display: none!important;
+    width: unset!important;
+  }
+  .carousel-inner{
+    height: 100%;
+  }
+  .slide1{
+    top: unset!important;
+  }
+ 
+  .carousel-control-next, .carousel-control-prev{
+    align-items: flex-end!important;
+    margin: 0 28%!important;
+    z-index: 100!important;
+  }
+  .carousel-control-prev-icon, .carousel-control-next-icon{
+    width: 14px!important;
+  }
+  .carousel-indicators {
+    margin: 0 0 -3px 0!important;
+  }
+  .carousel-indicators button{
+    border-radius: 100%!important;
+    height: 10px!important;
+    width: 10px!important;
+    margin: 5px!important;
+    border-radius:100%;
+    -webkit-border-radius:100%;
+    -moz-border-radius:100%;
+    -ms-border-radius:100%;
+    -o-border-radius:100%;
+  }
+  .c-navbar .container{
+    height: 100px;
+    z-index: 10000;
+    background: #00000020;
+  }
 
 }
